@@ -13,6 +13,7 @@ A collection of hands-on Identity & Access Management (IAM) labs performed in Mi
 | # | Lab Title | Key Concepts |
 |---|-----------|--------------|
 | 01 | [Creating a Restricted AU for NJ & Assigning User Admin Role](./lab-01-nj-administrative-unit/README.md) | Administrative Units, Scoped RBAC, Role Assignment |
+| 02 | [Creating a User Account with Job Title, Department & Office Location](./lab-02-create-user-mahdi-uddin/README.md) | User Provisioning, Member Accounts, Organizational Attributes |
 
 ---
 
