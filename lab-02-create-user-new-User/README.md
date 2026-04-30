@@ -1,4 +1,9 @@
-#  Creating a User Account with Job Title, Department & Office Location
+# Creating a User Account with Job Title, Department & Office Location
+
+## 🎥 Lab Demo
+[▶ Watch on Google Drive](https://drive.google.com/file/d/1udlKSlGoqGZrpAX7cybFzPqPBhCFksJR/view?usp=drive_link)
+
+---
 
 ## Overview
 
