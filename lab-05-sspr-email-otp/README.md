@@ -1,14 +1,17 @@
 # Enabling Self-Service Password Reset (SSPR) and Configuring Email OTP as an Authentication Method
 
+## 🎥 Lab Demo
+[▶ Watch on Google Drive](https://drive.google.com/file/d/1hlQxYZtM7MLR-08QS6XeVV-qVCLkiHnv/view?usp=drive_link)
+
+---
+
 ## Overview
 
-Self-Service Password Reset (SSPR) empowers users to reset their own passwords without contacting the helpdesk — reducing IT overhead and improving user experience. This lab demonstrates enabling SSPR for all users and configuring Email OTP as a supported authentication method.
+Self-Service Password Reset (SSPR) empowers users to reset their own passwords without contacting the helpdesk. This lab demonstrates enabling SSPR for all users and configuring Email OTP as a supported authentication method.
 
 ---
 
 ## Problem Statement
-
-Without SSPR, users who forget their passwords must contact IT support, creating delays and increasing helpdesk costs. The goal of this lab is to:
 
 - Enable **SSPR for all users** in the tenant
 - Configure **Email OTP** as a supported verification method
@@ -23,7 +26,7 @@ Without SSPR, users who forget their passwords must contact IT support, creating
 | Microsoft Azure Portal | Primary interface for all configurations |
 | Microsoft Entra ID | Identity and access management platform |
 | Self-Service Password Reset (SSPR) | User-driven password recovery |
-| Email OTP | One-time passcode delivered via email for verification |
+| Email OTP | One-time passcode delivered via email |
 
 ---
 
@@ -55,11 +58,9 @@ Without SSPR, users who forget their passwords must contact IT support, creating
 
 ## Key Concepts
 
-**Self-Service Password Reset (SSPR)** allows users to reset their passwords independently using pre-registered verification methods. This is a critical feature for reducing IT support costs and improving productivity.
+**Self-Service Password Reset (SSPR)** allows users to reset their passwords independently using pre-registered verification methods.
 
-**Email OTP** delivers a one-time passcode to the user's registered email address, providing a simple and accessible verification method that works without a smartphone or authenticator app.
-
-**Authentication Methods Policy** in Entra ID centrally controls which verification methods are available to users across SSPR, MFA, and passwordless sign-in scenarios.
+**Email OTP** delivers a one-time passcode to the user's registered email address — a simple and accessible verification method that works without a smartphone.
 
 ---
 
