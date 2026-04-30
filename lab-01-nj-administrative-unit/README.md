@@ -1,5 +1,10 @@
 # Creating a Restricted Administrative Unit for NJ & Assigning User Admin Role
 
+## 🎥 Lab Demo
+[▶ Watch on Google Drive](https://drive.google.com/file/d/1ZW9Wcj8Be4rbcs8tNet3XjwG8SS_BH4B/view?usp=drive_link)
+
+---
+
 ## Overview
 
 In many organizations, IT administrators need to manage users across different regions or departments without having access to the entire directory. This lab demonstrates how to use **Administrative Units (AUs)** in Microsoft Entra ID to scope admin permissions to a specific group of users — in this case, the New Jersey region.
