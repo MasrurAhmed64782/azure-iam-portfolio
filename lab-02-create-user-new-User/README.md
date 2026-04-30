@@ -1,4 +1,4 @@
-# Lab 02 — Creating a User Account with Job Title, Department & Office Location
+#  Creating a User Account with Job Title, Department & Office Location
 
 ## Overview
 
