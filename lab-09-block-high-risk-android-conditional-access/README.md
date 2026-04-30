@@ -1,14 +1,17 @@
 # Implementing Risk-Based Conditional Access to Block High-Risk Android Devices from All Cloud Applications
 
+## 🎥 Lab Demo
+[▶ Watch on Google Drive](https://drive.google.com/file/d/1dFzlegPbrFD1H6AUTxIYrF-JYTmc1-2O/view?usp=drive_link)
+
+---
+
 ## Overview
 
-While some risk-based policies step up authentication with MFA, others require a harder response — blocking access entirely. This lab demonstrates creating a Conditional Access policy that blocks high-risk Android devices and users from accessing any cloud application, while excluding the admin account to prevent lockout.
+While some risk-based policies step up authentication with MFA, others require a harder response — blocking access entirely. This lab demonstrates creating a Conditional Access policy that blocks high-risk Android devices and users from accessing any cloud application.
 
 ---
 
 ## Problem Statement
-
-Android devices present a unique risk surface — they may be unmanaged, rooted, or compromised. Combined with high user or sign-in risk signals, access from these devices should be blocked entirely. The goal of this lab is to:
 
 - **Block all access** from Android devices when high risk is detected
 - Apply the policy to **all cloud applications**
@@ -30,15 +33,14 @@ Android devices present a unique risk surface — they may be unmanaged, rooted,
 ## Key Steps
 
 ### 1. Navigate to Conditional Access
-- Opened **Azure Portal → Microsoft Entra ID → Security → Conditional Access**
-- Clicked **New Policy**
+- Opened **Azure Portal → Microsoft Entra ID → Security → Conditional Access → New Policy**
 
 ### 2. Configure Users
 - **Users:** All Users
 - **Excluded:** Main Admin (to prevent admin lockout)
 
 ### 3. Configure Target Resources
-- **Target Resources:** All Resources *(formerly known as All Cloud Apps)*
+- **Target Resources:** All Resources *(formerly All Cloud Apps)*
 
 ### 4. Configure Conditions
 | Condition | Setting |
@@ -50,10 +52,9 @@ Android devices present a unique risk surface — they may be unmanaged, rooted,
 ### 5. Configure Grant Controls
 - **Block Access** selected
 
-### 6. Enable and Create the Policy
+### 6. Enable and Create
 - Policy name: **"Block Android if High Risk"**
 - Policy state: **Enabled**
-- Clicked **Create**
 - Verified — policy appears when searching "Block Android if High Risk"
 
 ---
@@ -66,19 +67,16 @@ Android devices present a unique risk surface — they may be unmanaged, rooted,
 | ✅ Android Devices Blocked | High-risk Android sign-ins blocked from all cloud apps |
 | ✅ Admin Excluded | Main admin excluded to prevent lockout |
 | ✅ All Cloud Apps Protected | Policy covers all resources in the tenant |
-| ✅ Verified | Policy confirmed active in Conditional Access policies list |
 
 ---
 
 ## Key Concepts
 
-**Block vs. Grant Controls** — Conditional Access policies can either grant access (with or without conditions like MFA) or block it entirely. For high-risk scenarios, blocking is the appropriate response.
+**Block vs. Grant Controls** — For high-risk scenarios, blocking is the appropriate response rather than stepping up with MFA.
 
-**Admin Exclusion** is a critical best practice when creating blocking policies — always exclude at least one break-glass or admin account to avoid being locked out of the tenant.
+**Admin Exclusion** is a critical best practice — always exclude at least one admin account to avoid being locked out of the tenant.
 
-**Platform-Specific Policies** allow organizations to apply different security postures to different device types — Android, iOS, Windows, and macOS can each have tailored policies.
-
-**Defense in Depth** — This policy works alongside risk-based MFA policies (Lab 04) to create layered protection: medium risk triggers MFA, high risk on Android triggers a full block.
+**Defense in Depth** — This policy works alongside the risk-based MFA policy (Lab 04): medium risk triggers MFA, high risk on Android triggers a full block.
 
 ---
 
