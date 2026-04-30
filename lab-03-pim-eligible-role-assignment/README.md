@@ -1,5 +1,10 @@
 # Implementing Just-In-Time Privileged Access Using PIM — Eligible Role Assignment & Self-Activation
 
+## 🎥 Lab Demo
+[▶ Watch on Google Drive](https://drive.google.com/file/d/1OLX88Kxl9BPjgOK4ELYG7KhhoH-pkmT-/view?usp=drive_link)
+
+---
+
 ## Overview
 
 Permanently assigned privileged roles are a major security risk. Microsoft Entra Privileged Identity Management (PIM) solves this by making users *eligible* for a role rather than permanently assigned — they must explicitly activate it when needed, with justification. This lab demonstrates configuring and activating an eligible role assignment end-to-end.
