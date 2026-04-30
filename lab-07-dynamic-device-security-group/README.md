@@ -1,14 +1,17 @@
 # Creating a Dynamic Device Security Group for Windows Devices Using Rule-Based Membership
 
+## 🎥 Lab Demo
+[▶ Watch on Google Drive](https://drive.google.com/file/d/1qEq3Gdhmm9PaWwFDZSdoqVWoWXXB-dof/view?usp=drive_link)
+
+---
+
 ## Overview
 
-Dynamic groups in Microsoft Entra ID automatically manage their membership based on rules — eliminating manual group maintenance. This lab demonstrates creating a dynamic device group that automatically includes only Windows devices whose names start with "NJ", representing New Jersey devices.
+Dynamic groups in Microsoft Entra ID automatically manage their membership based on rules. This lab demonstrates creating a dynamic device group that automatically includes only Windows devices whose names start with "NJ", representing New Jersey devices.
 
 ---
 
 ## Problem Statement
-
-Manually managing group memberships is time-consuming and error-prone, especially in large organizations. The goal of this lab is to:
 
 - Create a **dynamic device group** that auto-populates based on device attributes
 - Target only **Windows devices** with names starting with **"NJ"**
@@ -29,8 +32,7 @@ Manually managing group memberships is time-consuming and error-prone, especiall
 ## Key Steps
 
 ### 1. Navigate to Groups
-- Opened **Azure Portal → Microsoft Entra ID → Groups**
-- Clicked **New Group**
+- Opened **Azure Portal → Microsoft Entra ID → Groups → New Group**
 
 ### 2. Configure the Group
 - Group name: **"New Jersey Windows Devices"**
@@ -38,7 +40,6 @@ Manually managing group memberships is time-consuming and error-prone, especiall
 - Owner: **Main Admin**
 
 ### 3. Configure Dynamic Membership Rules
-Two expressions were added to define membership:
 
 **Expression 1 — Device Name Filter:**
 | Field | Value |
@@ -73,11 +74,9 @@ Two expressions were added to define membership:
 
 ## Key Concepts
 
-**Dynamic Device Groups** use attribute-based rules to automatically manage membership. When a device's attributes change (e.g., renamed or OS updated), group membership updates automatically.
+**Dynamic Device Groups** use attribute-based rules to automatically manage membership — when a device's attributes change, group membership updates automatically.
 
-**Multi-Expression Rules** allow fine-grained targeting — combining displayName and deviceOSType ensures only the right devices are included, avoiding false positives.
-
-**Practical Use Case** — This group could be used to target Intune device compliance policies, software deployments, or Conditional Access rules specifically at NJ Windows devices.
+**Multi-Expression Rules** allow fine-grained targeting — combining displayName and deviceOSType ensures only the right devices are included.
 
 ---
 
