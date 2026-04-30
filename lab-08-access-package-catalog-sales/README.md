@@ -1,14 +1,17 @@
 # Configuring an Identity Governance Access Package and Catalog for Sales Team Entitlement Management
 
+## 🎥 Lab Demo
+[▶ Watch on Google Drive](https://drive.google.com/file/d/140yyDUO2MiEl5MIkhgsxhxUJdEHIJk6S/view?usp=drive_link)
+
+---
+
 ## Overview
 
-Microsoft Entra Entitlement Management allows organizations to automate access request workflows — users can request access to resources through self-service, with approvals and expiration built in. This lab demonstrates creating an access catalog and package that allows sales team members to request access to sales resources.
+Microsoft Entra Entitlement Management allows organizations to automate access request workflows. This lab demonstrates creating an access catalog and package that allows sales team members to request access to sales resources through self-service.
 
 ---
 
 ## Problem Statement
-
-Manually provisioning access to shared resources like SharePoint sites and groups is inefficient and difficult to audit. The goal of this lab is to:
 
 - Create a **catalog** to organize sales-related resources
 - Build an **access package** that bundles resource access into a single requestable unit
@@ -32,31 +35,20 @@ Manually provisioning access to shared resources like SharePoint sites and group
 
 ### 1. Create the Sales Catalog
 - Opened **Azure Portal → Microsoft Entra ID → Identity Governance → Catalogs**
-- Clicked **New Catalog**
-- Catalog name: **"Sales Catalog"**
-- Description: **"Sales Catalog"**
-- Created successfully
+- Catalog name: **"Sales Catalog"** — created successfully
 
 ### 2. Create the Access Package
 - Navigated to **Access Packages → New Access Package**
 - Package name: **"Sales Project Package"**
-- Description: **"Sales Project Package"**
 - Catalog: **Sales Catalog**
 
 ### 3. Configure Resource Roles
-Two resource types were added:
-
-**Groups & Teams:**
-- Resource: Sales Project Users
-- Role: **Member**
-
-**SharePoint Site:**
-- Resource: Sales Project Users
-- Role: **Sales Project Users Members**
+- **Groups & Teams:** Sales Project Users → Role: **Member**
+- **SharePoint Site:** Sales Project Users → Role: **Sales Project Users Members**
 
 ### 4. Configure Request Settings
 - Who can request: **Users, service principals, and agent identities in your directory**
-- Requestor: **Sales Employee** (member added)
+- Requestor: **Sales Employee**
 - Request type: **Self-service**
 - Fallback approver: **Main Admin**
 
@@ -74,19 +66,14 @@ Two resource types were added:
 | ✅ Access Package Created | "Sales Project Package" bundling group and SharePoint access |
 | ✅ Self-Service Enabled | Sales employees can request access without IT involvement |
 | ✅ Approver Configured | Main Admin set as fallback approver |
-| ✅ Verified | Package confirmed visible in Access Packages list |
 
 ---
 
 ## Key Concepts
 
-**Entitlement Management** automates the access request, approval, and expiration lifecycle — reducing manual provisioning and ensuring access is granted consistently and auditably.
+**Entitlement Management** automates the access request, approval, and expiration lifecycle — reducing manual provisioning and ensuring access is granted consistently.
 
-**Access Catalogs** act as containers that organize related access packages, making it easier for administrators to manage resources by department or function.
-
-**Access Packages** bundle multiple resource roles (groups, SharePoint, apps) into a single requestable unit — users request one package and get all necessary access automatically.
-
-**Self-Service Access Requests** empower users to request what they need without creating IT tickets, while the approver workflow ensures appropriate oversight.
+**Access Packages** bundle multiple resource roles into a single requestable unit — users request one package and get all necessary access automatically.
 
 ---
 
